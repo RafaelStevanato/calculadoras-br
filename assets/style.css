@@ -44,6 +44,10 @@ form button {
   margin-top: 16px; padding: 10px 16px; font: inherit; font-weight: 600; cursor: pointer;
   color: var(--accent-fg); background: var(--accent); border: 0; border-radius: 8px;
 }
+dl.comparativo { margin: 0; }
+dl.comparativo dt { font-weight: 600; margin-top: 12px; }
+dl.comparativo dd { margin: 2px 0 0; }
+h3 { font-size: 1.05rem; margin: 0 0 4px; }
 a.botao {
   display: inline-block; padding: 12px 18px; font-weight: 600; text-decoration: none;
   color: var(--accent-fg); background: var(--accent); border-radius: 8px;
