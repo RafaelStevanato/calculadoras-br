@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de juros compostos com aportes mensais | Calculadoras Trabalhistas e Financeiras</title>
+<meta name="description" content="Simule quanto rende um valor inicial com aportes mensais a juros compostos, em meses ou anos, com taxa mensal ou anual.">
+<link rel="canonical" href="https://rafaelstevanato.github.io/calculadoras-br/juros-compostos.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Por que não divido a taxa anual por 12?","acceptedAnswer":{"@type":"Answer","text":"Porque os juros compostos incidem sobre juros anteriores. 12% ao ano equivale a cerca de 0,949% ao mês, não 1%."}},{"@type":"Question","name":"O resultado já desconta imposto?","acceptedAnswer":{"@type":"Answer","text":"Não. É o valor bruto. Investimentos como CDB e Tesouro têm imposto de renda regressivo sobre o rendimento."}},{"@type":"Question","name":"Posso informar o prazo em anos?","acceptedAnswer":{"@type":"Answer","text":"Sim. Escolha \"anos\" no campo de prazo e o valor é convertido em meses."}}]}</script>
+</head>
+<body>
+<header><a class="marca" href="index.html">Calculadoras Trabalhistas e Financeiras</a><nav><a href="index.html">Calculadoras</a><a href="sobre.html">Sobre e metodologia</a></nav></header>
+<main>
+
+<h1>Calculadora de juros compostos com aportes mensais</h1>
+<p>Informe o valor inicial, quanto vai aportar por mês, a taxa e o prazo. A calculadora mostra o total acumulado, quanto saiu do seu bolso e quanto veio de juros.</p>
+<form class="card" data-calc="juros-compostos" novalidate>
+<label for="f-capital">Valor inicial (R$)</label><input id="f-capital" name="capital" type="text" inputmode="decimal" value="1000" autocomplete="off">
+<label for="f-aporte">Aporte mensal (R$)</label><input id="f-aporte" name="aporte" type="text" inputmode="decimal" value="300" autocomplete="off">
+<label for="f-taxa">Taxa de juros (%)</label><input id="f-taxa" name="taxa" type="text" inputmode="decimal" value="0,8" autocomplete="off">
+<label for="f-tipoTaxa">A taxa é</label><select id="f-tipoTaxa" name="tipoTaxa"><option value="mensal">ao mês</option><option value="anual">ao ano</option></select>
+<label for="f-prazo">Prazo</label><input id="f-prazo" name="prazo" type="text" inputmode="numeric" value="36" autocomplete="off">
+<label for="f-tipoPrazo">Prazo em</label><select id="f-tipoPrazo" name="tipoPrazo"><option value="meses">meses</option><option value="anos">anos</option></select>
+<button type="submit">Calcular</button>
+</form>
+<div class="card" id="resultado" aria-live="polite"></div>
+<noscript><p class="aviso">Esta calculadora precisa de JavaScript ativado.</p></noscript>
+<h2>Como é calculado</h2>
+<p>Os aportes entram no <strong>fim de cada mês</strong> e a taxa é aplicada sobre o saldo acumulado:</p>
+<p><code>Montante = Capital × (1+i)^n + Aporte × ((1+i)^n − 1) / i</code></p>
+<p>onde <em>i</em> é a taxa mensal em decimal e <em>n</em> o número de meses. Se você informar taxa anual, ela é convertida pela equivalência composta, <code>(1 + taxa anual)^(1/12) − 1</code>, e não dividida por 12.</p>
+<p>O resultado é bruto: não desconta imposto de renda, taxas de administração nem inflação.</p>
+<h2>Exemplo</h2>
+<p>Valor inicial de R$ 1.000,00, aporte de R$ 300,00 por mês, taxa de 0,8% ao mês, 36 meses: montante de R$ 13.790,85, sendo R$ 11.800,00 investidos e R$ 1.990,85 de juros.</p>
+<h2>Base legal e fontes</h2>
+<p>Cálculo puramente matemático (matemática financeira), sem norma legal aplicável.</p>
+
+<p class="aviso">Parâmetros conferidos em 2026-10-13. Se alguma regra mudar, os testes automatizados do projeto precisam ser atualizados antes de republicar.</p>
+<h2>Perguntas frequentes</h2>
+<details><summary>Por que não divido a taxa anual por 12?</summary><p>Porque os juros compostos incidem sobre juros anteriores. 12% ao ano equivale a cerca de 0,949% ao mês, não 1%.</p></details>
+<details><summary>O resultado já desconta imposto?</summary><p>Não. É o valor bruto. Investimentos como CDB e Tesouro têm imposto de renda regressivo sobre o rendimento.</p></details>
+<details><summary>Posso informar o prazo em anos?</summary><p>Sim. Escolha &quot;anos&quot; no campo de prazo e o valor é convertido em meses.</p></details>
+<script src="assets/calc.js"></script>
+<script src="assets/ui.js"></script>
+</main>
+<footer>
+<p>As calculadoras fornecem estimativas informativas e não substituem orientação de contador, advogado ou do sindicato da sua categoria. Valores brutos, sem descontos de INSS e imposto de renda, salvo indicação.</p>
+<p>Não coletamos dados pessoais: os cálculos acontecem no seu navegador.</p>
+</footer>
+</body>
+</html>

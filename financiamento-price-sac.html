@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulador Price x SAC: compare parcelas e juros do financiamento | Calculadoras Trabalhistas e Financeiras</title>
+<meta name="description" content="Compare a tabela Price (parcela fixa) com a SAC (amortização constante): valor das parcelas e total de juros pagos.">
+<link rel="canonical" href="https://rafaelstevanato.github.io/calculadoras-br/financiamento-price-sac.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qual é melhor, Price ou SAC?","acceptedAnswer":{"@type":"Answer","text":"Depende do orçamento: a Price cabe melhor no mês a mês inicial; a SAC custa menos em juros no total. A calculadora mostra os dois."}},{"@type":"Question","name":"A parcela real do banco será igual?","acceptedAnswer":{"@type":"Answer","text":"Pode diferir: o banco soma seguros, tarifas e, em alguns contratos, correção pela TR ou por índice."}}]}</script>
+</head>
+<body>
+<header><a class="marca" href="index.html">Calculadoras Trabalhistas e Financeiras</a><nav><a href="index.html">Calculadoras</a><a href="sobre.html">Sobre e metodologia</a></nav></header>
+<main>
+
+<h1>Simulador de financiamento Price x SAC</h1>
+<p>Informe o valor financiado, a taxa de juros mensal e o prazo. Veja lado a lado a parcela da Price, a primeira e a última parcela da SAC e quanto cada sistema custa em juros.</p>
+<form class="card" data-calc="financiamento-price-sac" novalidate>
+<label for="f-valor">Valor financiado (R$)</label><input id="f-valor" name="valor" type="text" inputmode="decimal" value="200000" autocomplete="off">
+<label for="f-taxa">Taxa de juros ao mês (%)</label><input id="f-taxa" name="taxa" type="text" inputmode="decimal" value="0,9" autocomplete="off">
+<label for="f-meses">Prazo (meses)</label><input id="f-meses" name="meses" type="text" inputmode="numeric" value="360" autocomplete="off">
+<button type="submit">Calcular</button>
+</form>
+<div class="card" id="resultado" aria-live="polite"></div>
+<noscript><p class="aviso">Esta calculadora precisa de JavaScript ativado.</p></noscript>
+<h2>Como é calculado</h2>
+<p><strong>Price:</strong> parcela fixa, <code>PMT = PV × i / (1 − (1+i)^−n)</code>. Nas primeiras parcelas a maior parte é juros.</p>
+<p><strong>SAC:</strong> amortização constante (<code>PV / n</code>) mais juros sobre o saldo devedor; a parcela começa mais alta e cai todo mês.</p>
+<p>Em geral a SAC paga menos juros no total e a Price tem parcela inicial menor. O cálculo usa só a taxa de juros informada: não inclui seguros, tarifas, TR nem correção do saldo devedor.</p>
+<h2>Exemplo</h2>
+<p>R$ 200.000,00 a 0,9% ao mês em 360 meses: a Price paga parcela fixa de R$ 1.874,48 e R$ 474.814,17 de juros; a SAC começa em R$ 2.355,56, termina em R$ 560,56 e paga R$ 324.900,00 de juros.</p>
+<h2>Base legal e fontes</h2>
+<p>Cálculo puramente matemático (sistemas de amortização), sem norma legal aplicável. Seguros e tarifas do contrato não estão incluídos.</p>
+
+<p class="aviso">Parâmetros conferidos em 2026-10-13. Se alguma regra mudar, os testes automatizados do projeto precisam ser atualizados antes de republicar.</p>
+<h2>Perguntas frequentes</h2>
+<details><summary>Qual é melhor, Price ou SAC?</summary><p>Depende do orçamento: a Price cabe melhor no mês a mês inicial; a SAC custa menos em juros no total. A calculadora mostra os dois.</p></details>
+<details><summary>A parcela real do banco será igual?</summary><p>Pode diferir: o banco soma seguros, tarifas e, em alguns contratos, correção pela TR ou por índice.</p></details>
+<script src="assets/calc.js"></script>
+<script src="assets/ui.js"></script>
+</main>
+<footer>
+<p>As calculadoras fornecem estimativas informativas e não substituem orientação de contador, advogado ou do sindicato da sua categoria. Valores brutos, sem descontos de INSS e imposto de renda, salvo indicação.</p>
+<p>Não coletamos dados pessoais: os cálculos acontecem no seu navegador.</p>
+</footer>
+</body>
+</html>

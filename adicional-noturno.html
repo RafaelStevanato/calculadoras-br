@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de adicional noturno (20% e hora reduzida) | Calculadoras Trabalhistas e Financeiras</title>
+<meta name="description" content="Calcule o adicional noturno de 20% e a hora reduzida de 52 minutos e 30 segundos.">
+<link rel="canonical" href="https://rafaelstevanato.github.io/calculadoras-br/adicional-noturno.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quando começa e termina o horário noturno?","acceptedAnswer":{"@type":"Answer","text":"No trabalho urbano, das 22h às 5h."}},{"@type":"Question","name":"A escala 12x36 muda o cálculo?","acceptedAnswer":{"@type":"Answer","text":"Pode mudar; há entendimentos e normas coletivas específicas. Esta calculadora aplica a regra geral."}}]}</script>
+</head>
+<body>
+<header><a class="marca" href="index.html">Calculadoras Trabalhistas e Financeiras</a><nav><a href="index.html">Calculadoras</a><a href="sobre.html">Sobre e metodologia</a></nav></header>
+<main>
+
+<h1>Calculadora de adicional noturno</h1>
+<p>Informe salário, jornada e as horas trabalhadas à noite no mês (entre 22h e 5h). A calculadora mostra o adicional e o efeito da hora noturna reduzida.</p>
+<form class="card" data-calc="adicional-noturno" novalidate>
+<label for="f-salario">Salário bruto mensal (R$)</label><input id="f-salario" name="salario" type="text" inputmode="decimal" value="2200" autocomplete="off">
+<label for="f-horasSemanais">Jornada semanal (horas)</label><input id="f-horasSemanais" name="horasSemanais" type="text" inputmode="numeric" value="44" autocomplete="off">
+<label for="f-horasNoturnas">Horas noturnas trabalhadas no mês (horas de relógio)</label><input id="f-horasNoturnas" name="horasNoturnas" type="text" inputmode="decimal" value="100" autocomplete="off">
+<label for="f-adicionalPct">Adicional noturno (%) — mínimo legal 20</label><input id="f-adicionalPct" name="adicionalPct" type="text" inputmode="decimal" value="20" autocomplete="off">
+<label for="f-horaReduzida">Considerar hora noturna reduzida (52min30s)?</label><select id="f-horaReduzida" name="horaReduzida"><option value="sim">Sim</option><option value="nao">Não</option></select>
+<button type="submit">Calcular</button>
+</form>
+<div class="card" id="resultado" aria-live="polite"></div>
+<noscript><p class="aviso">Esta calculadora precisa de JavaScript ativado.</p></noscript>
+<h2>Como é calculado</h2>
+<p>No trabalho urbano, o adicional noturno é de, no mínimo, <strong>20%</strong> sobre a hora diurna, para o trabalho entre 22h e 5h. Além disso, a hora noturna é <strong>reduzida</strong>: cada 52 minutos e 30 segundos contam como uma hora.</p>
+<p><code>Adicional = horas noturnas × valor da hora × 20%</code></p>
+<p><code>Hora reduzida = (horas × 60 / 52,5 − horas) × valor da hora × 1,2</code></p>
+<p>Os valores são o que excede o salário mensal. Esta página trata do <strong>trabalhador urbano</strong>; rurais têm horário e percentual próprios. O 20% é o <strong>mínimo</strong>: convenções coletivas podem fixar mais. Algumas empresas reduzem a jornada noturna em vez de pagar a hora reduzida, e nesse caso não há o valor extra da hora reduzida (escolha "Não"). Escalas como a 12x36 e convenções podem diferir; confira o seu caso.</p>
+<h2>Exemplo</h2>
+<p>Salário de R$ 2.200,00 (hora normal R$ 10,00), 100 horas noturnas: adicional de 20% = R$ 200,00; hora reduzida = R$ 171,43; total R$ 371,43 além do salário.</p>
+<h2>Base legal e fontes</h2>
+<p>CLT, art. 73 (adicional de 20% e hora noturna de 52min30s); CF, art. 7º, IX.</p>
+<ul><li><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm" rel="noopener" target="_blank">CLT (Decreto-Lei 5.452/1943)</a></li><li><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" rel="noopener" target="_blank">Constituição Federal de 1988</a></li></ul>
+<p class="aviso">Parâmetros conferidos em 2026-10-13. Se alguma regra mudar, os testes automatizados do projeto precisam ser atualizados antes de republicar.</p>
+<h2>Perguntas frequentes</h2>
+<details><summary>Quando começa e termina o horário noturno?</summary><p>No trabalho urbano, das 22h às 5h.</p></details>
+<details><summary>A escala 12x36 muda o cálculo?</summary><p>Pode mudar; há entendimentos e normas coletivas específicas. Esta calculadora aplica a regra geral.</p></details>
+<script src="assets/calc.js"></script>
+<script src="assets/ui.js"></script>
+</main>
+<footer>
+<p>As calculadoras fornecem estimativas informativas e não substituem orientação de contador, advogado ou do sindicato da sua categoria. Valores brutos, sem descontos de INSS e imposto de renda, salvo indicação.</p>
+<p>Não coletamos dados pessoais: os cálculos acontecem no seu navegador.</p>
+</footer>
+</body>
+</html>

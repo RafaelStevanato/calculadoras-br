@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rafaelstevanato.github.io/calculadoras-br/sitemap.xml

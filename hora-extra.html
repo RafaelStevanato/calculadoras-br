@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de hora extra 50% e 100% | Calculadoras Trabalhistas e Financeiras</title>
+<meta name="description" content="Calcule o valor da hora normal e das horas extras a 50% e 100% pelo salário e jornada semanal.">
+<link rel="canonical" href="https://rafaelstevanato.github.io/calculadoras-br/hora-extra.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O divisor é sempre 220?","acceptedAnswer":{"@type":"Answer","text":"Só para jornada de 44 horas semanais. Para 40 horas o divisor é 200; para 36, 180."}},{"@type":"Question","name":"A hora extra aumenta o DSR?","acceptedAnswer":{"@type":"Answer","text":"Em geral há reflexo no descanso semanal remunerado, mas esta calculadora não o inclui."}}]}</script>
+</head>
+<body>
+<header><a class="marca" href="index.html">Calculadoras Trabalhistas e Financeiras</a><nav><a href="index.html">Calculadoras</a><a href="sobre.html">Sobre e metodologia</a></nav></header>
+<main>
+
+<h1>Calculadora de hora extra</h1>
+<p>Informe salário, jornada semanal e quantas horas extras fez. A calculadora usa o divisor correto para a sua jornada.</p>
+<form class="card" data-calc="hora-extra" novalidate>
+<label for="f-salario">Salário bruto mensal (R$)</label><input id="f-salario" name="salario" type="text" inputmode="decimal" value="2200" autocomplete="off">
+<label for="f-horasSemanais">Jornada semanal (horas)</label><input id="f-horasSemanais" name="horasSemanais" type="text" inputmode="numeric" value="44" autocomplete="off">
+<label for="f-horas50">Horas extras com adicional de 50%</label><input id="f-horas50" name="horas50" type="text" inputmode="decimal" value="10" autocomplete="off">
+<label for="f-horas100">Horas extras com adicional de 100%</label><input id="f-horas100" name="horas100" type="text" inputmode="decimal" value="0" autocomplete="off">
+<button type="submit">Calcular</button>
+</form>
+<div class="card" id="resultado" aria-live="polite"></div>
+<noscript><p class="aviso">Esta calculadora precisa de JavaScript ativado.</p></noscript>
+<h2>Como é calculado</h2>
+<p>Primeiro encontra-se o valor da hora normal: <code>salário / (5 × horas semanais)</code>, que dá 220 para 44 h/semana e 200 para 40 h/semana. A hora extra é a hora normal acrescida de, no mínimo, 50%.</p>
+<p><code>Hora extra 50% = valor da hora × 1,5</code> &nbsp; <code>Hora extra 100% = valor da hora × 2</code></p>
+<p><strong>Atenção:</strong> o resultado <strong>não inclui reflexos</strong> no descanso semanal remunerado (DSR), férias e 13º, nem adicional noturno ou de insalubridade. O adicional de <strong>100% não é regra geral</strong>: depende de convenção ou acordo coletivo, ou de situações como domingos e feriados trabalhados sem folga compensatória. O mínimo legal é 50%.</p>
+<h2>Exemplo</h2>
+<p>Salário de R$ 2.200,00, jornada de 44 h/semana (divisor 220): hora normal R$ 10,00; 10 horas a 50% = R$ 150,00.</p>
+<h2>Base legal e fontes</h2>
+<p>CF, art. 7º, XVI (adicional mínimo de 50%); CLT, art. 59. Divisor conforme a jornada semanal.</p>
+<ul><li><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" rel="noopener" target="_blank">Constituição Federal de 1988</a></li><li><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm" rel="noopener" target="_blank">CLT (Decreto-Lei 5.452/1943)</a></li></ul>
+<p class="aviso">Parâmetros conferidos em 2026-10-13. Se alguma regra mudar, os testes automatizados do projeto precisam ser atualizados antes de republicar.</p>
+<h2>Perguntas frequentes</h2>
+<details><summary>O divisor é sempre 220?</summary><p>Só para jornada de 44 horas semanais. Para 40 horas o divisor é 200; para 36, 180.</p></details>
+<details><summary>A hora extra aumenta o DSR?</summary><p>Em geral há reflexo no descanso semanal remunerado, mas esta calculadora não o inclui.</p></details>
+<script src="assets/calc.js"></script>
+<script src="assets/ui.js"></script>
+</main>
+<footer>
+<p>As calculadoras fornecem estimativas informativas e não substituem orientação de contador, advogado ou do sindicato da sua categoria. Valores brutos, sem descontos de INSS e imposto de renda, salvo indicação.</p>
+<p>Não coletamos dados pessoais: os cálculos acontecem no seu navegador.</p>
+</footer>
+</body>
+</html>

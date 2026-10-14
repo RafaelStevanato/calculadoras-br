@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulador de financiamento de veículo: parcela, juros e entrada | Calculadoras Trabalhistas e Financeiras</title>
+<meta name="description" content="Simule a parcela de um financiamento de carro ou moto com entrada, taxa e prazo, e veja o total de juros.">
+<link rel="canonical" href="https://rafaelstevanato.github.io/calculadoras-br/financiamento-de-veiculo.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Uma entrada maior compensa?","acceptedAnswer":{"@type":"Answer","text":"Reduz o valor financiado e, portanto, os juros totais. A calculadora permite comparar mudando a entrada."}},{"@type":"Question","name":"Por que a parcela do banco é maior?","acceptedAnswer":{"@type":"Answer","text":"Provavelmente por IOF, seguros e tarifas financiados junto; compare o CET."}}]}</script>
+</head>
+<body>
+<header><a class="marca" href="index.html">Calculadoras Trabalhistas e Financeiras</a><nav><a href="index.html">Calculadoras</a><a href="sobre.html">Sobre e metodologia</a></nav></header>
+<main>
+
+<h1>Simulador de financiamento de veículo</h1>
+<p>Informe o preço do veículo, a entrada, a taxa mensal e o prazo. Veja a parcela, o total pago e quanto vai de juros, e compare prazos.</p>
+<form class="card" data-calc="financiamento-de-veiculo" novalidate>
+<label for="f-preco">Preço do veículo (R$)</label><input id="f-preco" name="preco" type="text" inputmode="decimal" value="60000" autocomplete="off">
+<label for="f-entrada">Entrada (R$)</label><input id="f-entrada" name="entrada" type="text" inputmode="decimal" value="12000" autocomplete="off">
+<label for="f-taxa">Taxa de juros ao mês (%)</label><input id="f-taxa" name="taxa" type="text" inputmode="decimal" value="1,5" autocomplete="off">
+<label for="f-meses">Prazo (meses)</label><input id="f-meses" name="meses" type="text" inputmode="numeric" value="48" autocomplete="off">
+<button type="submit">Calcular</button>
+</form>
+<div class="card" id="resultado" aria-live="polite"></div>
+<noscript><p class="aviso">Esta calculadora precisa de JavaScript ativado.</p></noscript>
+<h2>Como é calculado</h2>
+<p>Financiamentos de veículo costumam usar parcelas fixas (tabela Price): <code>PMT = valor financiado × i / (1 − (1+i)^−n)</code>, em que o valor financiado é o preço menos a entrada.</p>
+<p>O total pago soma a entrada e todas as parcelas. A taxa anual equivalente mostra o custo real da taxa mensal: 1,5% ao mês é cerca de 19,6% ao ano, não 18%.</p>
+<p>O cálculo não inclui IOF, seguros, tarifas nem registro de gravame, que aumentam o custo efetivo total (CET) do contrato. Compare sempre o CET informado pelo banco.</p>
+<h2>Exemplo</h2>
+<p>Veículo de R$ 60.000,00 com entrada de R$ 12.000,00 a 1,5% ao mês em 48 meses: parcela de R$ 1.410,00, juros de R$ 19.680,00 e total pago de R$ 79.680,00.</p>
+<h2>Base legal e fontes</h2>
+<p>Cálculo puramente matemático (tabela Price). IOF, seguros e tarifas do contrato não estão incluídos.</p>
+
+<p class="aviso">Parâmetros conferidos em 2026-10-13. Se alguma regra mudar, os testes automatizados do projeto precisam ser atualizados antes de republicar.</p>
+<h2>Perguntas frequentes</h2>
+<details><summary>Uma entrada maior compensa?</summary><p>Reduz o valor financiado e, portanto, os juros totais. A calculadora permite comparar mudando a entrada.</p></details>
+<details><summary>Por que a parcela do banco é maior?</summary><p>Provavelmente por IOF, seguros e tarifas financiados junto; compare o CET.</p></details>
+<script src="assets/calc.js"></script>
+<script src="assets/ui.js"></script>
+</main>
+<footer>
+<p>As calculadoras fornecem estimativas informativas e não substituem orientação de contador, advogado ou do sindicato da sua categoria. Valores brutos, sem descontos de INSS e imposto de renda, salvo indicação.</p>
+<p>Não coletamos dados pessoais: os cálculos acontecem no seu navegador.</p>
+</footer>
+</body>
+</html>

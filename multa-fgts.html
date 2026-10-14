@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora da multa de 40% do FGTS | Calculadoras Trabalhistas e Financeiras</title>
+<meta name="description" content="Calcule a multa rescisória do FGTS: 40% na demissão sem justa causa ou 20% no acordo, sobre o saldo depositado.">
+<link rel="canonical" href="https://rafaelstevanato.github.io/calculadoras-br/multa-fgts.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quem paga a multa do FGTS?","acceptedAnswer":{"@type":"Answer","text":"O empregador paga; ela vai para a conta vinculada do trabalhador."}},{"@type":"Question","name":"No acordo posso sacar todo o saldo?","acceptedAnswer":{"@type":"Answer","text":"No acordo previsto no art. 484-A da CLT o saque é de até 80% do saldo, e não há seguro-desemprego."}}]}</script>
+</head>
+<body>
+<header><a class="marca" href="index.html">Calculadoras Trabalhistas e Financeiras</a><nav><a href="index.html">Calculadoras</a><a href="sobre.html">Sobre e metodologia</a></nav></header>
+<main>
+
+<h1>Calculadora da multa do FGTS (40% ou 20%)</h1>
+<p>Informe o saldo depositado (veja no extrato do FGTS) ou deixe 0 para estimar pelo salário e meses de contrato. Escolha a modalidade e veja a multa.</p>
+<form class="card" data-calc="multa-fgts" novalidate>
+<label for="f-saldo">Saldo depositado no contrato (R$) — deixe 0 para estimar</label><input id="f-saldo" name="saldo" type="text" inputmode="decimal" value="0" autocomplete="off">
+<label for="f-salario">Salário bruto mensal (R$) — usado só na estimativa</label><input id="f-salario" name="salario" type="text" inputmode="decimal" value="2500" autocomplete="off">
+<label for="f-meses">Meses de contrato — usado só na estimativa</label><input id="f-meses" name="meses" type="text" inputmode="numeric" value="24" autocomplete="off">
+<label for="f-modalidade">Tipo de desligamento</label><select id="f-modalidade" name="modalidade"><option value="sem-justa-causa">Dispensa sem justa causa (40%)</option><option value="acordo">Acordo entre as partes (20%)</option></select>
+<button type="submit">Calcular</button>
+</form>
+<div class="card" id="resultado" aria-live="polite"></div>
+<noscript><p class="aviso">Esta calculadora precisa de JavaScript ativado.</p></noscript>
+<h2>Como é calculado</h2>
+<p>O empregador deposita <strong>8% da remuneração</strong> por mês no FGTS. Na dispensa sem justa causa ele paga uma multa de <strong>40% sobre o saldo</strong> depositado no contrato; no acordo, 20%.</p>
+<p><code>Multa = saldo depositado × 40%</code> (ou 20%)</p>
+<p><strong>Atenção:</strong> a multa incide sobre <strong>todos os depósitos do contrato</strong>, inclusive os feitos sobre 13º e férias. A estimativa pelo salário considera só 8% do salário por mês, sem 13º, sem correção (TR mais 3% ao ano) e sem variações de salário, então tende a ficar <strong>abaixo do saldo real</strong>. Para o valor correto use o saldo do extrato do FGTS. Em pedido de demissão e justa causa não há multa.</p>
+<h2>Exemplo</h2>
+<p>Salário de R$ 2.500,00 por 24 meses: depósito estimado de R$ 4.800,00 (8% ao mês, sem correção); multa de 40% = R$ 1.920,00.</p>
+<h2>Base legal e fontes</h2>
+<p>Lei 8.036/1990, art. 15 (depósito de 8%) e art. 18, § 1º (multa de 40%); CLT, art. 484-A (acordo: multa de 20%).</p>
+<ul><li><a href="https://www.planalto.gov.br/ccivil_03/leis/l8036consol.htm" rel="noopener" target="_blank">Lei 8.036/1990 (FGTS)</a></li><li><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm" rel="noopener" target="_blank">CLT (Decreto-Lei 5.452/1943)</a></li></ul>
+<p class="aviso">Parâmetros conferidos em 2026-10-13. Se alguma regra mudar, os testes automatizados do projeto precisam ser atualizados antes de republicar.</p>
+<h2>Perguntas frequentes</h2>
+<details><summary>Quem paga a multa do FGTS?</summary><p>O empregador paga; ela vai para a conta vinculada do trabalhador.</p></details>
+<details><summary>No acordo posso sacar todo o saldo?</summary><p>No acordo previsto no art. 484-A da CLT o saque é de até 80% do saldo, e não há seguro-desemprego.</p></details>
+<script src="assets/calc.js"></script>
+<script src="assets/ui.js"></script>
+</main>
+<footer>
+<p>As calculadoras fornecem estimativas informativas e não substituem orientação de contador, advogado ou do sindicato da sua categoria. Valores brutos, sem descontos de INSS e imposto de renda, salvo indicação.</p>
+<p>Não coletamos dados pessoais: os cálculos acontecem no seu navegador.</p>
+</footer>
+</body>
+</html>

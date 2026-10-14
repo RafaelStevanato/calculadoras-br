@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hora extra com DSR: calcule o reflexo no descanso semanal | Calculadoras Trabalhistas e Financeiras</title>
+<meta name="description" content="Calcule o valor das horas extras e o reflexo no descanso semanal remunerado (DSR) do mês.">
+<link rel="canonical" href="https://rafaelstevanato.github.io/calculadoras-br/hora-extra-com-dsr.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"O que contam como dias úteis?","acceptedAnswer":{"@type":"Answer","text":"Os dias de trabalho do mês, excluindo domingos e feriados. O sábado conta quando é dia útil na empresa (dia de trabalho ou de repouso não remunerado)."}},{"@type":"Question","name":"O DSR entra no cálculo do 13º e das férias?","acceptedAnswer":{"@type":"Answer","text":"Em geral sim, pois o DSR sobre extras integra a remuneração, mas esta página mostra só o reflexo do mês."}}]}</script>
+</head>
+<body>
+<header><a class="marca" href="index.html">Calculadoras Trabalhistas e Financeiras</a><nav><a href="index.html">Calculadoras</a><a href="sobre.html">Sobre e metodologia</a></nav></header>
+<main>
+
+<h1>Calculadora de hora extra com DSR</h1>
+<p>Informe salário, jornada, horas extras e quantos dias úteis e domingos/feriados tem o mês. O resultado soma as extras ao reflexo no DSR.</p>
+<form class="card" data-calc="hora-extra-com-dsr" novalidate>
+<label for="f-salario">Salário bruto mensal (R$)</label><input id="f-salario" name="salario" type="text" inputmode="decimal" value="2200" autocomplete="off">
+<label for="f-horasSemanais">Jornada semanal (horas)</label><input id="f-horasSemanais" name="horasSemanais" type="text" inputmode="numeric" value="44" autocomplete="off">
+<label for="f-horas50">Horas extras com adicional de 50%</label><input id="f-horas50" name="horas50" type="text" inputmode="decimal" value="20" autocomplete="off">
+<label for="f-horas100">Horas extras com adicional de 100%</label><input id="f-horas100" name="horas100" type="text" inputmode="decimal" value="0" autocomplete="off">
+<label for="f-diasUteis">Dias úteis do mês (dias de trabalho, exclui domingos e feriados)</label><input id="f-diasUteis" name="diasUteis" type="text" inputmode="numeric" value="26" autocomplete="off">
+<label for="f-domingosFeriados">Domingos e feriados do mês</label><input id="f-domingosFeriados" name="domingosFeriados" type="text" inputmode="numeric" value="4" autocomplete="off">
+<button type="submit">Calcular</button>
+</form>
+<div class="card" id="resultado" aria-live="polite"></div>
+<noscript><p class="aviso">Esta calculadora precisa de JavaScript ativado.</p></noscript>
+<h2>Como é calculado</h2>
+<p>As horas extras habituais refletem no descanso semanal remunerado. O reflexo é o valor das extras do mês dividido pelos dias úteis, multiplicado pelos domingos e feriados:</p>
+<p><code>DSR = (valor das horas extras / dias úteis) × domingos e feriados</code></p>
+<p>O valor da hora extra segue a regra da página de hora extra: <code>salário / (5 × horas semanais) × 1,5</code> (ou × 2 para 100%).</p>
+<p>Esta calculadora não inclui os reflexos das extras em férias, 13º e FGTS.</p>
+<h2>Exemplo</h2>
+<p>Salário de R$ 2.200,00, 20 horas extras a 50% em um mês com 26 dias úteis e 4 domingos/feriados: extras de R$ 300,00 + DSR de R$ 46,15 = R$ 346,15.</p>
+<h2>Base legal e fontes</h2>
+<p>Lei 605/1949; TST, Súmula 172; CF, art. 7º, XVI (adicional mínimo de 50%).</p>
+<ul><li>Lei 605/1949 (repouso semanal remunerado)</li><li>TST, Súmula 172 (repouso semanal remunerado e horas extras habituais)</li><li><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" rel="noopener" target="_blank">Constituição Federal de 1988</a></li></ul>
+<p class="aviso">Parâmetros conferidos em 2026-10-13. Se alguma regra mudar, os testes automatizados do projeto precisam ser atualizados antes de republicar.</p>
+<h2>Perguntas frequentes</h2>
+<details><summary>O que contam como dias úteis?</summary><p>Os dias de trabalho do mês, excluindo domingos e feriados. O sábado conta quando é dia útil na empresa (dia de trabalho ou de repouso não remunerado).</p></details>
+<details><summary>O DSR entra no cálculo do 13º e das férias?</summary><p>Em geral sim, pois o DSR sobre extras integra a remuneração, mas esta página mostra só o reflexo do mês.</p></details>
+<script src="assets/calc.js"></script>
+<script src="assets/ui.js"></script>
+</main>
+<footer>
+<p>As calculadoras fornecem estimativas informativas e não substituem orientação de contador, advogado ou do sindicato da sua categoria. Valores brutos, sem descontos de INSS e imposto de renda, salvo indicação.</p>
+<p>Não coletamos dados pessoais: os cálculos acontecem no seu navegador.</p>
+</footer>
+</body>
+</html>

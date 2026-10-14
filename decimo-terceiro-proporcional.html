@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de 13º salário proporcional | Calculadoras Trabalhistas e Financeiras</title>
+<meta name="description" content="Calcule o 13º salário proporcional (bruto) pelos meses trabalhados no ano, com a regra dos 15 dias.">
+<link rel="canonical" href="https://rafaelstevanato.github.io/calculadoras-br/decimo-terceiro-proporcional.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quem trabalhou menos de 15 dias no mês?","acceptedAnswer":{"@type":"Answer","text":"Esse mês não conta para o 13º proporcional."}},{"@type":"Question","name":"O cálculo já desconta INSS e IR?","acceptedAnswer":{"@type":"Answer","text":"Não. O resultado é o valor bruto."}}]}</script>
+</head>
+<body>
+<header><a class="marca" href="index.html">Calculadoras Trabalhistas e Financeiras</a><nav><a href="index.html">Calculadoras</a><a href="sobre.html">Sobre e metodologia</a></nav></header>
+<main>
+
+<h1>Calculadora de 13º salário proporcional</h1>
+<p>Informe o salário, a média de comissões ou horas extras (se houver) e os meses trabalhados no ano. Se trabalhou 15 dias ou mais em um mês, ele conta inteiro.</p>
+<form class="card" data-calc="decimo-terceiro-proporcional" novalidate>
+<label for="f-salario">Salário bruto mensal (R$)</label><input id="f-salario" name="salario" type="text" inputmode="decimal" value="3000" autocomplete="off">
+<label for="f-variaveis">Média mensal de comissões/horas extras (R$)</label><input id="f-variaveis" name="variaveis" type="text" inputmode="decimal" value="0" autocomplete="off">
+<label for="f-meses">Meses completos trabalhados no ano</label><input id="f-meses" name="meses" type="text" inputmode="numeric" value="7" autocomplete="off">
+<label for="f-dias">Dias trabalhados no mês incompleto (0 a 30)</label><input id="f-dias" name="dias" type="text" inputmode="numeric" value="0" autocomplete="off">
+<button type="submit">Calcular</button>
+</form>
+<div class="card" id="resultado" aria-live="polite"></div>
+<noscript><p class="aviso">Esta calculadora precisa de JavaScript ativado.</p></noscript>
+<h2>Como é calculado</h2>
+<p>O 13º é a remuneração de dezembro dividida por 12, vezes os meses trabalhados no ano. Cada mês com <strong>15 dias ou mais de trabalho</strong> conta como mês inteiro.</p>
+<p><code>13º proporcional = (salário + média de variáveis) × meses / 12</code></p>
+<p>O valor é <strong>bruto</strong>: INSS e imposto de renda são descontados na folha e dependem de tabelas anuais, que esta calculadora não aplica.</p>
+<h2>Exemplo</h2>
+<p>Salário de R$ 3.000,00 e 7 meses trabalhados: R$ 3.000,00 × 7/12 = R$ 1.750,00 brutos.</p>
+<h2>Base legal e fontes</h2>
+<p>Lei 4.090/1962, art. 1º (1/12 por mês; fração de 15 dias ou mais vale mês inteiro) e CF, art. 7º, VIII.</p>
+<ul><li><a href="https://www.planalto.gov.br/ccivil_03/leis/l4090.htm" rel="noopener" target="_blank">Lei 4.090/1962 (13º salário)</a></li><li><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" rel="noopener" target="_blank">Constituição Federal de 1988</a></li></ul>
+<p class="aviso">Parâmetros conferidos em 2026-10-13. Se alguma regra mudar, os testes automatizados do projeto precisam ser atualizados antes de republicar.</p>
+<h2>Perguntas frequentes</h2>
+<details><summary>Quem trabalhou menos de 15 dias no mês?</summary><p>Esse mês não conta para o 13º proporcional.</p></details>
+<details><summary>O cálculo já desconta INSS e IR?</summary><p>Não. O resultado é o valor bruto.</p></details>
+<script src="assets/calc.js"></script>
+<script src="assets/ui.js"></script>
+</main>
+<footer>
+<p>As calculadoras fornecem estimativas informativas e não substituem orientação de contador, advogado ou do sindicato da sua categoria. Valores brutos, sem descontos de INSS e imposto de renda, salvo indicação.</p>
+<p>Não coletamos dados pessoais: os cálculos acontecem no seu navegador.</p>
+</footer>
+</body>
+</html>

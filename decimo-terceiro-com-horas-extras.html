@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>13º salário com horas extras: como calcular a média | Calculadoras Trabalhistas e Financeiras</title>
+<meta name="description" content="Calcule o 13º incluindo a média das horas extras habituais recebidas no ano.">
+<link rel="canonical" href="https://rafaelstevanato.github.io/calculadoras-br/decimo-terceiro-com-horas-extras.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Todas as horas extras entram?","acceptedAnswer":{"@type":"Answer","text":"As habituais. Extras muito esporádicas podem ser discutidas; em caso de dúvida, consulte o sindicato ou um profissional."}},{"@type":"Question","name":"Como calcular se trabalhei só alguns meses?","acceptedAnswer":{"@type":"Answer","text":"Informe os meses trabalhados: a média usa esse número e o 13º é proporcional."}}]}</script>
+</head>
+<body>
+<header><a class="marca" href="index.html">Calculadoras Trabalhistas e Financeiras</a><nav><a href="index.html">Calculadoras</a><a href="sobre.html">Sobre e metodologia</a></nav></header>
+<main>
+
+<h1>Calculadora de 13º salário com horas extras</h1>
+<p>Informe o salário, o total recebido de horas extras no ano e os meses trabalhados. A calculadora inclui a média das extras na base do 13º.</p>
+<form class="card" data-calc="decimo-terceiro-com-horas-extras" novalidate>
+<label for="f-salario">Salário bruto mensal (R$)</label><input id="f-salario" name="salario" type="text" inputmode="decimal" value="2400" autocomplete="off">
+<label for="f-totalHorasExtras">Total de horas extras recebidas no ano (R$)</label><input id="f-totalHorasExtras" name="totalHorasExtras" type="text" inputmode="decimal" value="1200" autocomplete="off">
+<label for="f-meses">Meses trabalhados no ano (1 a 12)</label><input id="f-meses" name="meses" type="text" inputmode="numeric" value="12" autocomplete="off">
+<button type="submit">Calcular</button>
+</form>
+<div class="card" id="resultado" aria-live="polite"></div>
+<noscript><p class="aviso">Esta calculadora precisa de JavaScript ativado.</p></noscript>
+<h2>Como é calculado</h2>
+<p>As horas extras prestadas com habitualidade integram a base do 13º. Calcula-se a <strong>média mensal</strong> das extras e soma-se ao salário:</p>
+<p><code>13º = (salário + total de extras / meses) × meses / 12</code></p>
+<p>O valor é bruto, sem INSS e imposto de renda. Se o contrato tem salário variável além das extras (comissões, adicionais), some-os à média.</p>
+<h2>Exemplo</h2>
+<p>Salário de R$ 2.400,00 e R$ 1.200,00 de horas extras no ano (média de R$ 100,00 por mês), 12 meses: 13º bruto de R$ 2.500,00.</p>
+<h2>Base legal e fontes</h2>
+<p>TST, Súmula 45 e Lei 4.090/1962, art. 1º.</p>
+<ul><li>TST, Súmula 45 (horas extras habituais no 13º salário)</li><li><a href="https://www.planalto.gov.br/ccivil_03/leis/l4090.htm" rel="noopener" target="_blank">Lei 4.090/1962 (13º salário)</a></li></ul>
+<p class="aviso">Parâmetros conferidos em 2026-10-13. Se alguma regra mudar, os testes automatizados do projeto precisam ser atualizados antes de republicar.</p>
+<h2>Perguntas frequentes</h2>
+<details><summary>Todas as horas extras entram?</summary><p>As habituais. Extras muito esporádicas podem ser discutidas; em caso de dúvida, consulte o sindicato ou um profissional.</p></details>
+<details><summary>Como calcular se trabalhei só alguns meses?</summary><p>Informe os meses trabalhados: a média usa esse número e o 13º é proporcional.</p></details>
+<script src="assets/calc.js"></script>
+<script src="assets/ui.js"></script>
+</main>
+<footer>
+<p>As calculadoras fornecem estimativas informativas e não substituem orientação de contador, advogado ou do sindicato da sua categoria. Valores brutos, sem descontos de INSS e imposto de renda, salvo indicação.</p>
+<p>Não coletamos dados pessoais: os cálculos acontecem no seu navegador.</p>
+</footer>
+</body>
+</html>
