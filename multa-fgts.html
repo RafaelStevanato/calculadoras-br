@@ -17,9 +17,9 @@
 <h1>Calculadora da multa do FGTS (40% ou 20%)</h1>
 <p>Informe o saldo depositado (veja no extrato do FGTS) ou deixe 0 para estimar pelo salário e meses de contrato. Escolha a modalidade e veja a multa.</p>
 <form class="card" data-calc="multa-fgts" novalidate>
-<label for="f-saldo">Saldo depositado no contrato (R$) — deixe 0 para estimar</label><input id="f-saldo" name="saldo" type="text" inputmode="decimal" value="0" autocomplete="off">
-<label for="f-salario">Salário bruto mensal (R$) — usado só na estimativa</label><input id="f-salario" name="salario" type="text" inputmode="decimal" value="2500" autocomplete="off">
-<label for="f-meses">Meses de contrato — usado só na estimativa</label><input id="f-meses" name="meses" type="text" inputmode="numeric" value="24" autocomplete="off">
+<label for="f-saldo">Saldo depositado no contrato (R$), 0 para estimar</label><input id="f-saldo" name="saldo" type="text" inputmode="decimal" value="0" autocomplete="off">
+<label for="f-salario">Salário bruto mensal (R$), usado só na estimativa</label><input id="f-salario" name="salario" type="text" inputmode="decimal" value="2500" autocomplete="off">
+<label for="f-meses">Meses de contrato, usado só na estimativa</label><input id="f-meses" name="meses" type="text" inputmode="numeric" value="24" autocomplete="off">
 <label for="f-modalidade">Tipo de desligamento</label><select id="f-modalidade" name="modalidade"><option value="sem-justa-causa">Dispensa sem justa causa (40%)</option><option value="acordo">Acordo entre as partes (20%)</option></select>
 <button type="submit">Calcular</button>
 </form>
